@@ -14,9 +14,6 @@
             <li class="nav-item">
               <router-link to="/forms" class="nav-link">Forms</router-link>
             </li>
-            <li class="nav-item">
-              <router-link to="/create" class="nav-link">Create Form</router-link>
-            </li>
           </ul>
         </div>
       </div>
