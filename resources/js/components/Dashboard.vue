@@ -27,7 +27,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">Submissions</h5>
             <p class="card-text">View form submissions</p>
-            <router-link to="/submissions" class="btn btn-info">View Submissions</router-link>
+            <router-link to="/all-submissions" class="btn btn-info">View All Submissions</router-link>
           </div>
         </div>
       </div>

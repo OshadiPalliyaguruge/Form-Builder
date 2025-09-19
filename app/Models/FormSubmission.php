@@ -22,4 +22,9 @@ class FormSubmission extends Model
     {
         return $this->hasMany(FormAnswer::class, 'submission_id');
     }
+
+    public function getFormTitleAttribute()
+    {
+        return $this->form->title;
+    }
 }

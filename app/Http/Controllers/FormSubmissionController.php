@@ -10,7 +10,7 @@ class FormSubmissionController extends Controller
 {
     public function index(Form $form)
     {
-        return $form->submissions()->with('answers.field')->get();
+        return $form->submissions()->with(['form:id,title', 'answers.field'])->get();
     }
 
     public function store(Request $request, Form $form)
@@ -48,5 +48,12 @@ class FormSubmissionController extends Controller
     public function show(FormSubmission $submission)
     {
         return $submission->load('answers.field');
+    }
+
+    public function allSubmissions()
+    {
+        return FormSubmission::with(['form:id,title', 'answers.field'])
+                            ->latest()
+                            ->get();
     }
 }

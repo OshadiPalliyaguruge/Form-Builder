@@ -13,8 +13,7 @@
         <div class="list-group">
           <router-link to="/" class="list-group-item list-group-item-action">Dashboard</router-link>
           <router-link to="/forms" class="list-group-item list-group-item-action active">Forms</router-link>
-          <a href="#" class="list-group-item list-group-item-action">Submissions</a>
-          <a href="#" class="list-group-item list-group-item-action">Settings</a>
+          <router-link to="/all-submissions" class="list-group-item list-group-item-action">Submissions</router-link>
         </div>
       </div>
       

@@ -17,6 +17,7 @@ Route::prefix('api')->group(function () {
     Route::post('forms/{form}/submissions', [FormSubmissionController::class, 'store']);
     Route::get('forms/{form}/submissions', [FormSubmissionController::class, 'index']);
     Route::get('submissions/{submission}', [FormSubmissionController::class, 'show']);
+    Route::get('submissions', [FormSubmissionController::class, 'allSubmissions']);
 });
 
 Route::get('/{any}', function () {
