@@ -22,7 +22,12 @@ class FormSubmissionController extends Controller
         $submission = $form->submissions()->create();
 
         foreach ($request->answers as $fieldId => $value) {
-            $field = $form->fields()->findOrFail($fieldId);
+            $field = $form->fields()->find($fieldId);
+            
+            if (!$field) {
+                Log::warning("Field ID $fieldId not found for form ID {$form->id}");
+                continue;
+            }
             
             if ($field->required && empty($value)) {
                 return response()->json([
