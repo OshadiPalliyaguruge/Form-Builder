@@ -21,4 +21,9 @@ class Form extends Model
     {
         return $this->hasMany(FormSubmission::class);
     }
+
+    public function getSubmissionsCountAttribute()
+    {
+        return $this->submissions()->count();
+    }
 }
